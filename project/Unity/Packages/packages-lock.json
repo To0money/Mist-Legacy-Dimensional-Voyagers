@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.lk.simple-framework": {
+      "version": "file:SimpleFramework",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.burst": {
       "version": "1.8.17",
       "depth": 1,
