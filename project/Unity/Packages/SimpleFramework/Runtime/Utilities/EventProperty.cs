@@ -11,7 +11,6 @@ namespace LK.SimpleFramework
         #region Public or protected fields and properties
         /// <summary>
         /// <para>获取或设置 <see cref="EventProperty{T}"/> 的值。</para>
-        /// <para>set访问器会检查值是否相等，如果相等，则不会触发事件（若想跳过检查，请使用<see cref="SetValueWithoutCheck"/>）。</para>
         /// </summary>
         public T Value
         {
@@ -21,7 +20,8 @@ namespace LK.SimpleFramework
             }
             set
             {
-                SetValue(value);
+                m_Value = value;
+                m_Action?.Invoke(m_Value);
             }
         }
         #endregion
@@ -33,7 +33,7 @@ namespace LK.SimpleFramework
 
         #region Public or protected methods
         /// <summary>
-        /// 以给定的值初始化 <see cref="EventProperty{T}"/>。
+        /// 以给定的值初始化 <see cref="EventProperty{T}"。/>。
         /// </summary>
         public EventProperty(T value)
         {
@@ -44,21 +44,21 @@ namespace LK.SimpleFramework
         /// 设置 <see cref="EventProperty{T}"/> 的值，此方法会检查值是否相等，如果相等，则不会触发事件。
         /// </summary>
         /// <param name="value"></param>
-        public void SetValue(T value)
+        public void SetValueWithCheck(T value)
         {
-            if (m_Value.Equals(value)) return;
-            m_Value = value;
-            m_Action?.Invoke(m_Value);
-        }
-
-        /// <summary>
-        /// 设置 <see cref="EventProperty{T}"/> 的值，此方法会跳过值检查，即使值未发生变动，也会触发一次事件。
-        /// </summary>
-        /// <param name="value"></param>
-        public void SetValueWithoutCheck(T value)
-        {
-            m_Value = value;
-            m_Action?.Invoke(m_Value);
+            if (m_Value is null)
+            {
+                if(value is not null)
+                {
+                    m_Value = value;
+                    m_Action?.Invoke(m_Value);
+                }
+            }
+            else if(!m_Value.Equals(value))
+            {
+                m_Value = value;
+                m_Action?.Invoke(m_Value);
+            }
         }
 
         /// <summary>
