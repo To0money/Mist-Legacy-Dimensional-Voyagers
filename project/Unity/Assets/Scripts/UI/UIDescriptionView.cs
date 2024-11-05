@@ -1,9 +1,7 @@
-using LK.SimpleFramework;
 using TMPro;
-using UnityEngine;
 
 /// <summary>
-/// UI提示文本类型
+/// UI提示文本类型。
 /// </summary>
 public class UIDescriptionView : UIBase
 {

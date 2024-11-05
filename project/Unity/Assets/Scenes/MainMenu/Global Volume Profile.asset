@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2718868630089234356
+--- !u!114 &-4603884202614037827
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17,34 +17,34 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 2
   gaussianStart:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 10
   gaussianEnd:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 30
   gaussianMaxRadius:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   highQualitySampling:
     m_OverrideState: 0
     m_Value: 0
   focusDistance:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 40
   aperture:
     m_OverrideState: 1
-    m_Value: 5.6
+    m_Value: 25
   focalLength:
     m_OverrideState: 1
-    m_Value: 50
+    m_Value: 120
   bladeCount:
-    m_OverrideState: 1
-    m_Value: 5
+    m_OverrideState: 0
+    m_Value: 9
   bladeCurvature:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   bladeRotation:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -61,7 +61,7 @@ MonoBehaviour:
   components:
   - {fileID: 8507515200180939129}
   - {fileID: 699491844507844698}
-  - {fileID: -2718868630089234356}
+  - {fileID: -4603884202614037827}
   - {fileID: 6021812471654247975}
   - {fileID: 6117641392766816147}
   - {fileID: 7689881592255965544}
@@ -83,10 +83,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.92
+    m_Value: 0.9
   intensity:
     m_OverrideState: 1
-    m_Value: 1.28
+    m_Value: 1.5
   scatter:
     m_OverrideState: 0
     m_Value: 0.7
@@ -127,16 +127,16 @@ MonoBehaviour:
   active: 1
   color:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.29305622, b: 0.33962262, a: 1}
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
   center:
     m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.32
+    m_Value: 0.36
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 1
   rounded:
     m_OverrideState: 0
     m_Value: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   postExposure:
     m_OverrideState: 1
     m_Value: 0.6
@@ -205,7 +205,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   neutralHDRRangeReductionMode:
     m_OverrideState: 0
     m_Value: 2

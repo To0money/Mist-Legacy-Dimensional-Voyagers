@@ -2,7 +2,7 @@ using LK.SimpleFramework;
 using UnityEngine.EventSystems;
 
 /// <summary>
-/// UI基类
+/// UI基类。
 /// </summary>
 public abstract class UIBase : UIViewBase, IPointerEnterHandler, IPointerExitHandler
 {
